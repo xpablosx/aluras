@@ -1,0 +1,57 @@
+:root {
+    --preto: #1C1C1C;
+    --branco: #FFFFFF;
+    --vermelho: #800000; /* Gryffindor */
+    --azul: #0000FF;     /* Ravenclaw */
+    --verde: #008000;    /* Slytherin */
+    --amarelo: #FFD700;  /* Hufflepuff */
+  }
+  
+  body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+  }
+  
+  .biblioteca {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .livro {
+    background-color: var(--preto);
+    padding: 1.5em;
+    margin: 1em auto;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .livro__titulo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--branco);
+    margin-bottom: 0.5em;
+  }
+  
+  .livro__conteudo {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .livro__imagem {
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 1em;
+  }
+  
+  .livro__descricao {
+    font-size: 16px;
+    color: var(--branco);
+    flex: 1;
+  }
+  
