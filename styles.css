@@ -8,17 +8,25 @@
   }
   
   body {
+    font-size: 20px;
     background-color: var(--preto);
     color: var(--branco);
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     padding: 1em;
+    background-image: url(img/wp.png);
+    background-size: cover;
   }
   
   .biblioteca {
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
+    padding: 1em;
+  }
+  
+  .biblioteca__titulo, .biblioteca__descricao {
+    text-align: center;
   }
   
   .livro {
@@ -26,9 +34,10 @@
     padding: 1.5em;
     margin: 1em auto;
     border-radius: 8px;
-    text-align: left;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    border-left: 8px solid;
   }
   
   .livro__titulo {
@@ -40,18 +49,70 @@
   
   .livro__conteudo {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
   }
   
   .livro__imagem {
     width: 150px;
     border-radius: 8px;
     margin-right: 1em;
+    cursor: pointer;
   }
   
   .livro__descricao {
     font-size: 16px;
     color: var(--branco);
-    flex: 1;
+  }
+  
+  /* Estilos para Tablet */
+  @media (max-width: 1024px) {
+    .biblioteca {
+      padding: 1em;
+    }
+    
+    .livro {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .livro__imagem {
+      margin: 0 0 1em 0;
+    }
+  
+    .livro__descricao {
+      font-size: 15px;
+    }
+  }
+  
+  /* Estilos para Celular */
+  @media (max-width: 600px) {
+    body {
+      padding: 0.5em;
+    }
+  
+    .biblioteca {
+      padding: 0.5em;
+    }
+  
+    .livro__titulo {
+      font-size: 18px;
+      text-align: center;
+    }
+  
+    .livro {
+      flex-direction: column;
+      padding: 1em;
+    }
+  
+    .livro__imagem {
+      width: 120px;
+      margin-bottom: 1em;
+    }
+  
+    .livro__descricao {
+      font-size: 14px;
+      text-align: center;
+    }
   }
   
