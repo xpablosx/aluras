@@ -1,118 +1,203 @@
-:root {
-    --preto: #1C1C1C;
-    --branco: #FFFFFF;
-    --vermelho: #800000; /* Gryffindor */
-    --azul: #0000FF;     /* Ravenclaw */
-    --verde: #008000;    /* Slytherin */
-    --amarelo: #FFD700;  /* Hufflepuff */
-  }
-  
-  body {
-    font-size: 20px;
-    background-color: var(--preto);
-    color: var(--branco);
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    background-image: url(img/wp.png);
-    background-size: cover;
-  }
-  
-  .biblioteca {
-    max-width: 1200px;
-    margin: auto;
-    padding: 1em;
-  }
-  
-  .biblioteca__titulo, .biblioteca__descricao {
-    text-align: center;
-  }
-  
-  .livro {
-    background-color: var(--preto);
-    padding: 1.5em;
-    margin: 1em auto;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border-left: 8px solid;
-  }
-  
-  .livro__titulo {
-    font-size: 22px;
-    font-weight: bold;
-    color: var(--branco);
-    margin-bottom: 0.5em;
-  }
-  
-  .livro__conteudo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  
-  .livro__imagem {
-    width: 150px;
-    border-radius: 8px;
-    margin-right: 1em;
-    cursor: pointer;
-  }
-  
-  .livro__descricao {
-    font-size: 16px;
-    color: var(--branco);
-  }
-  
-  /* Estilos para Tablet */
-  @media (max-width: 1024px) {
-    .biblioteca {
-      padding: 1em;
-    }
-    
-    .livro {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .livro__imagem {
-      margin: 0 0 1em 0;
-    }
-  
-    .livro__descricao {
-      font-size: 15px;
-    }
-  }
-  
-  /* Estilos para Celular */
-  @media (max-width: 600px) {
-    body {
-      padding: 0.5em;
-    }
-  
-    .biblioteca {
-      padding: 0.5em;
-    }
-  
-    .livro__titulo {
-      font-size: 18px;
-      text-align: center;
-    }
-  
-    .livro {
-      flex-direction: column;
-      padding: 1em;
-    }
-  
-    .livro__imagem {
-      width: 120px;
-      margin-bottom: 1em;
-    }
-  
-    .livro__descricao {
-      font-size: 14px;
-      text-align: center;
-    }
-  }
-  
+/* Estilos Gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* Cabeçalho */
+.cabeçalho {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.container__titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffcc00;
+}
+
+.container__titulo--negrito {
+  color: #fff;
+}
+
+.lista-menu,
+.opções {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lista-menu__link,
+.opções__link {
+  color: #fff;
+  font-weight: 500;
+}
+
+.container__imagem-transparente {
+  opacity: 0.8;
+}
+
+.opções__botão {
+  display: none;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  background-color: #2a2a2a;
+  color: #ffcc00;
+  padding: 2rem 1rem;
+}
+
+.banner__titulo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.banner__pesquisa {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 80%;
+  max-width: 400px;
+  border: 2px solid #ffcc00;
+  border-radius: 4px;
+}
+
+/* Carrossel */
+.carrossel {
+  padding: 2rem 1rem;
+}
+
+.carrossel__titulo {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.carrossel__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Cores das Casas */
+.gryffindor { color: #ae0001; } /* Vermelho Gryffindor */
+.slytherin { color: #2a623d; } /* Verde Slytherin */
+.ravenclaw { color: #0e1a40; } /* Azul Ravenclaw */
+.hufflepuff { color: #ffdb00; } /* Amarelo Hufflepuff */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 200px;
+  text-align: center;
+}
+
+.descrição__titulo-livro {
+  color: #ffcc00;
+  font-size: 1.5rem;
+}
+
+/* Botões do Card */
+.botões {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.botões__ancora {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffcc00;
+  color: #000;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.botões__ancora:hover {
+  background-color: #cc9900;
+}
+
+/* Tópicos Visitados Recentemente */
+.tópicos {
+  padding: 2rem 1rem;
+  background-color: #fff;
+}
+
+.tópicos__titulo {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+}
+
+.tópicos__lista {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tópicos__link {
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+/* Cores dos Links dos Tópicos - com cores de Hogwarts */
+.tópicos__link.griffindor { color: #ae0001; }
+.tópicos__link.slytherin { color: #2a623d; }
+.tópicos__link.ravenclaw { color: #0e1a40; }
+.tópicos__link.hufflepuff { color: #ffdb00; }
+
+.tópicos__link:hover {
+  color: #cc9900;
+}
+
+/* Rodapé */
+.rodapé {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.rodapé__imagem {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.rodapé__link {
+  color: #ffcc00;
+  font-weight: 500;
+}
+
+.rodapé__link:hover {
+  color: #cc9900;
+}
+
+/* Swiper */
+.swiper {
+  width: 100%;
+  max-width: 600px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ffcc00;
+}

@@ -1,108 +1,178 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biblioteca de Harry Potter</title>
+  <title>Harry Potter Books</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <header class="cabeçalho">
+    <div class="container">
+      <input type="checkbox" id="menu" class="container__botao">
+      <label for="menu" class="container__rotulo">
+        <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+      </label>
+      <ul class="lista-menu">
+        <li class="lista-menu__titulo">Categorias</li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Magia</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Feitiços</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Criaturas Mágicas</a>
+        </li>
+        <li class="lista-menu__item">
+          <a href="#" class="lista-menu__link">Personagens</a>
+        </li>
+      </ul>
+      <img src="img/Logo_HP.svg" alt="Logo de Harry Potter Books" class="container__imagem">
+      <h1 class="container__titulo"><b class="container__titulo--negrito">Harry</b> Potter Books</h1>
 
-  <!-- Biblioteca de Harry Potter -->
-  <section class="biblioteca">
-    <h1 class="biblioteca__titulo">Biblioteca do Universo de Harry Potter</h1>
-    <p class="biblioteca__descricao">Explore os livros e personagens do universo mágico de J.K. Rowling.</p>
+      <ul class="opções">
+        <input type="checkbox" id="opções-menu" class="opções__botão" />
+        <label for="opções-menu" class="opções__rotulo">
+          <li class="opções__item">Categorias</li>
+        </label>
 
-    <div class="livro" style="border-left: 8px solid #800000;"> <!-- Cor da casa Gryffindor -->
-        <h2 class="livro__titulo">Harry Potter e a Pedra Filosofal</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-Pedra-Filosofal-Rowling/dp/8532511015/ref=pd_bxgy_thbs_d_sccl_1/147-2731523-3336837?pd_rd_w=hiEkw&content-id=amzn1.sym.354403e7-7651-4baa-9581-b12c519004fa&pf_rd_p=354403e7-7651-4baa-9581-b12c519004fa&pf_rd_r=P0QGMNB5MJQD7YHW2H21&pd_rd_wg=BJkpA&pd_rd_r=96b74507-2d16-4146-8b97-0a820529f325&pd_rd_i=8532511015&psc=1" target="_blank">
-            <img src="img/harry_potter1.jpg" alt="Harry Potter e a Pedra Filosofal" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            Harry descobre que é um bruxo e vai para Hogwarts, onde começa sua jornada mágica e enfrenta pela primeira vez o Lorde das Trevas.
-          </p>
+        <ul class="lista-menu">
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Histórias</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Feitiços</a>
+          </li>
+          <li class="lista-menu__item">
+            <a href="#" class="lista-menu__link">Artefatos Mágicos</a>
+          </li>
+        </ul>
+        <li class="opções__item"><a href="#" class="opções__link">Favoritos</a></li>
+        <li class="opções__item"><a href="#" class="opções__link">Minha coleção</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <a href="#"><img src="img/Favoritos_HP.svg" alt="Favoritos"
+          class="container__imagem container__imagem-transparente"></a>
+      <a href="#" class="container__link">
+        <img src="img/Compras_HP.svg" alt="Sacola de compras" class="container__imagem">
+        <p class="container__texto">Minha sacola</p>
+      </a>
+      <a href="#" class="container__link">
+        <img src="img/Usuario_HP.svg" alt="Meu perfil" class="container__imagem">
+        <p class="container__texto">Meu perfil</p>
+      </a>
+    </div>
+  </header>
+
+  <section class="banner">
+    <h2 class="banner__titulo">Pronto para embarcar em uma nova aventura mágica?</h2>
+    <p class="banner__texto">Descubra o próximo livro encantador para sua coleção!</p>
+    <input type="search" class="banner__pesquisa" placeholder="Qual será seu próximo livro de magia?">
+  </section>
+
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+    <div class="carrossel__container">
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/Livro_Hogwarts.svg" alt="Livro sobre a Escola de Magia Hogwarts"></div>
+          <div class="swiper-slide"><img src="img/Livro_Pocoes.svg" alt="Livro sobre Poções Mágicas"></div>
+          <div class="swiper-slide"><img src="img/Livro_Criaturas.svg" alt="Guia de Criaturas Mágicas"></div>
+          <div class="swiper-slide"><img src="img/Livro_Feiticos.svg" alt="Livro de Feitiços"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="card">
+        <div class="card__descrição">
+          <div class="descrição">
+            <h3 class="descrição__titulo">Recomendado para você...</h3>
+            <h2 class="descrição__titulo-livro">História de Hogwarts</h2>
+            <p class="descrição__texto">Explore os segredos e histórias da famosa escola de magia.</p>
+          </div>
+          <img src="img/Livro_HogwartsRecomendado.svg" class="descrição__imagem" />
+        </div>
+        <div class="card__botões">
+          <ul class="botões">
+            <li class="botões__item"><img src="img/Favoritos_HP.svg" alt="Favoritar livro"></li>
+            <li class="botões__item"><img src="img/Compras_HP.svg" alt="Adicionar ao carrinho de compras"></li>
+          </ul>
+          <a href="#" class="botões__ancora">Saiba mais</a>
         </div>
       </div>
-    
-      <!-- Livro 2 -->
-      <div class="livro" style="border-left: 8px solid #0000FF;"> <!-- Cor da casa Ravenclaw -->
-        <h2 class="livro__titulo">Harry Potter e a Câmara Secreta</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-C%C3%A2mara-Secreta-Rowling/dp/853251166X/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.YagZJOtOHvjhLXza55MjKbxsodON9J8uPwZeZ-t4HQbmANtm9mHwXJna1r4nTGjLgw_JQWUDU5PA9dTLVba-1EEbnMR50Y_DR2hACkNfjafvaNoEaoKa6IcdXRygzFHnnf8Ia8RatZXc1XMAah05iFu6JiNl2i5v3PsXFqJi69m7EIsgk3LdK220fxALcJlmvgnn1NJouh7kN0yG0YbbR9ptNATeJslFdJKjJQtfyMHT5Dcx7AOTlUiFThUzpRPgfm4gFA8gl23spSzZwtVqBB8FE2Qx0SzvFg2dUHD-9lg.Op7-iiKg_4oPvIclsOI20_fzxjGng29DqNmodmgaCM0&dib_tag=se&keywords=harry+potter+e+a+pedra+filosofal&qid=1730054441&sr=8-4" target="_blank">
-            <img src="img/harry_potter2.jpg" alt="Harry Potter e a Câmara Secreta" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            Em seu segundo ano, Harry descobre a Câmara Secreta em Hogwarts, onde um terrível monstro ameaça os alunos.
-          </p>
+    </div>
+  </section>
+
+  <section class="carrossel">
+    <h2 class="carrossel__titulo">Mais Vendidos</h2>
+    <div class="carrossel__container">
+      <div class="swiper">
+        <div class="swiper-pagination"></div>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/Livro_Artefatos.svg" alt="Livro sobre Artefatos Mágicos"></div>
+          <div class="swiper-slide"><img src="img/Livro_Duendes.svg" alt="Guia sobre Criaturas e Duendes"></div>
+          <div class="swiper-slide"><img src="img/Livro_Pocoes.svg" alt="Livro de Poções Avançadas"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <div class="card">
+        <div class="card__descrição">
+          <div class="descrição">
+            <img src="img/Estrelas_HP.svg" alt="Avaliação 5 estrelas">
+            <h3 class="descrição__titulo">Autor do Mês</h3>
+            <h2 class="descrição__titulo-livro">Alvo Dumbledore</h2>
+            <p class="descrição__texto">Diretor de Hogwarts, mestre em magia e autor de livros clássicos.</p>
+          </div>
+          <img src="img/Dumbledore_Autor.svg" class="descrição__imagem">
+        </div>
+        <div class="card__botões">
+          <ul class="botões">
+            <li class="botões__item"><img src="img/Favoritos_HP.svg" alt="Favoritar livro"></li>
+            <li class="botões__item"><img src="img/Compras_HP.svg" alt="Adicionar ao carrinho de compras"></li>
+          </ul>
+          <a href="#" class="botões__ancora">Saiba mais</a>
         </div>
       </div>
-    
-      <!-- Livro 3 -->
-      <div class="livro" style="border-left: 8px solid #008000;"> <!-- Cor da casa Slytherin -->
-        <h2 class="livro__titulo">Harry Potter e o Prisioneiro de Azkaban</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-Prisioneiro-Azkaban-Rowling/dp/8532512062/ref=pd_bxgy_thbs_d_sccl_2/147-2731523-3336837?pd_rd_w=gktCq&content-id=amzn1.sym.354403e7-7651-4baa-9581-b12c519004fa&pf_rd_p=354403e7-7651-4baa-9581-b12c519004fa&pf_rd_r=GXTNJCEXXXRNTQWX6860&pd_rd_wg=cXPb7&pd_rd_r=f144842b-4eff-4324-aa55-4a7f0926196e&pd_rd_i=8532512062&psc=1" target="_blank">
-            <img src="img/harry_potter3.jpg" alt="Harry Potter e o Prisioneiro de Azkaban" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            Harry descobre mais sobre seu passado e enfrenta Sirius Black, um prisioneiro que fugiu de Azkaban.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Livro 4 -->
-      <div class="livro" style="border-left: 8px solid #FFD700;"> <!-- Cor da casa Hufflepuff -->
-        <h2 class="livro__titulo">Harry Potter e o Cálice de Fogo</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-C%C3%A1lice-Fogo-J-k-Rowling/dp/8532512526/ref=pd_bxgy_thbs_d_sccl_2/147-2731523-3336837?pd_rd_w=YIRfy&content-id=amzn1.sym.354403e7-7651-4baa-9581-b12c519004fa&pf_rd_p=354403e7-7651-4baa-9581-b12c519004fa&pf_rd_r=CTFDF8AKD2GY02XSAG5T&pd_rd_wg=982ki&pd_rd_r=6ccf9f09-c446-474f-bd93-d4d69dc0e7de&pd_rd_i=8532512526&psc=1" target="_blank">
-            <img src="img/harry_potter4.jpg" alt="Harry Potter e o Cálice de Fogo" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            No Torneio Tribruxo, Harry enfrenta desafios perigosos e vê o retorno do Lorde das Trevas.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Livro 5 -->
-      <div class="livro" style="border-left: 8px solid #800000;">
-        <h2 class="livro__titulo">Harry Potter e a Ordem da Fênix</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-Ordem-F%C3%AAnix-Rowling/dp/853251622X/ref=pd_bxgy_thbs_d_sccl_1/147-2731523-3336837?pd_rd_w=ztfLl&content-id=amzn1.sym.354403e7-7651-4baa-9581-b12c519004fa&pf_rd_p=354403e7-7651-4baa-9581-b12c519004fa&pf_rd_r=88SHA6XT22C087XJWR7Y&pd_rd_wg=fE2nR&pd_rd_r=528859d9-7059-4d28-8e94-119c3b70102b&pd_rd_i=853251622X&psc=1" target="_blank">
-            <img src="img/harry_potter5.jpg" alt="Harry Potter e a Ordem da Fênix" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            Harry enfrenta a repressão do Ministério da Magia e forma a Ordem da Fênix para resistir a Voldemort.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Livro 6 -->
-      <div class="livro" style="border-left: 8px solid #0000FF;">
-        <h2 class="livro__titulo">Harry Potter e o Enigma do Príncipe</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-Enigma-Do-Pr%C3%ADncipe/dp/8532519474/ref=pd_bxgy_thbs_d_sccl_2/147-2731523-3336837?pd_rd_w=XkCtx&content-id=amzn1.sym.354403e7-7651-4baa-9581-b12c519004fa&pf_rd_p=354403e7-7651-4baa-9581-b12c519004fa&pf_rd_r=45WB9SMFQSGCSE1AT5CC&pd_rd_wg=X8GR4&pd_rd_r=e0141de3-5b80-4468-8e23-5bc122168cf1&pd_rd_i=8532519474&psc=1" target="_blank">
-            <img src="img/harry_potter6.jpg" alt="Harry Potter e o Enigma do Príncipe" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            Harry e Dumbledore exploram o passado de Voldemort, descobrindo segredos essenciais para derrotá-lo.
-          </p>
-        </div>
-      </div>
-    
-      <!-- Livro 7 -->
-      <div class="livro" style="border-left: 8px solid #008000;">
-        <h2 class="livro__titulo">Harry Potter e as Relíquias da Morte</h2>
-        <div class="livro__conteudo">
-          <a href="https://www.amazon.com.br/Harry-Potter-As-Rel%C3%ADquias-Morte/dp/8532522610/ref=pd_bxgy_thbs_d_sccl_1/147-2731523-3336837?pd_rd_w=a75WT&content-id=amzn1.sym.354403e7-7651-4baa-9581-b12c519004fa&pf_rd_p=354403e7-7651-4baa-9581-b12c519004fa&pf_rd_r=N8B68N028QKS574Z0DKD&pd_rd_wg=oe2aw&pd_rd_r=bc59d5e6-b0aa-4d16-948e-63d000c4d5c1&pd_rd_i=8532522610&psc=1" target="_blank">
-            <img src="img/harry_potter7.jpg" alt="Harry Potter e as Relíquias da Morte" class="livro__imagem">
-          </a>
-          <p class="livro__descricao">
-            Harry parte em uma jornada final para destruir as Horcruxes e derrotar Voldemort de uma vez por todas.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    </body>
-    </html>
+    </div>
+  </section>
+
+  <section class="tópicos">
+    <h2 class="tópicos__titulo">Tópicos Visitados Recentemente</h2>
+    <ul class="tópicos__lista">
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Feitiços de Defesa</a></li>
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Poções Mágicas</a></li>
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Herbologia</a></li>
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Duelos Mágicos</a></li>
+      <li class="tópicos__item"><a href="#" class="tópicos__link">Transfiguração</a></li>
+    </ul>
+  </section>
+
+  <footer class="rodapé">
+    <img src="img/Logo_HP.svg" class="rodapé__imagem">
+    <ul class="rodapé__lista">
+      <li><a href="#" class="rodapé__link">Catálogo Completo</a></li>
+      <li><a href="#" class="rodapé__link">Histórias</a></li>
+      <li><a href="#" class="rodapé__link">Personagens</a></li>
+      <li><a href="#" class="rodapé__link">Sobre Nós</a></li>
+      <li><a href="#" class="rodapé__link">Contato</a></li>
+    </ul>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
